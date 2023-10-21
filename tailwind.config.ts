@@ -1,26 +1,20 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
-const { nextui } = require('@nextui-org/react');
-
+const { nextui } = require("@nextui-org/react");
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/(routes)/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/[locale]/(routes)/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/[locale]/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-    },
+    extend: {},
   },
+  darkMode: "class",
   plugins: [
     nextui({
       themes: {
@@ -35,5 +29,6 @@ const config: Config = {
       },
     }),
   ],
-}
-export default config
+};
+
+export default config;
