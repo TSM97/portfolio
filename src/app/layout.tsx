@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className="min-w-screen">
         <NextUIProvider>
           <AuthProvider>
-            {/* <NavBar /> */}
+            <NavBar />
             <main className="min-w-screen">{children}</main>
           </AuthProvider>
         </NextUIProvider>

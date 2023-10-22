@@ -2,25 +2,39 @@
 
 import { Image } from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
+import { TypeAnimation } from "react-type-animation";
 
 import { AvatarMaker } from "../svgs";
-import { ThemeSwitcher } from "../ThemeSwitcher/ThemeSwitcher";
 
 type Props = {};
 
 function HeroSection({}: Props) {
   return (
-    <section className="container">
-      <ThemeSwitcher />
-      <div className="grid grid-cols-1 lg:grid-cols-12 pt-3">
+    <section className="container self-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 pt-3 justify-between">
         <div className="col-span-7 place-self-center">
-          <h1 className="text-white font-extrabold text-4xl lg:text-6xl pt-4">
-            Hello, I'm John,
+          <h1 className="font-extrabold text-4xl lg:text-6xl pt-4">
+            <span>Hello, I'm </span>
+            <br />
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                "John",
+                3000,
+                "Front-End Developer",
+                1000,
+                "UI/UX Designer",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
           </h1>
-          <h2 className="text-white font-bold text-2xl lg:text-3xl py-3">
-            You can call me Giannis.
-          </h2>
-          <p className="text-gray-300 text-lg lg:text-xl py-4">Bla bla bla!</p>
+          <p className="text-lg lg:text-xl py-4">
+            Bla bla bla, Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla
+            bla, Bla bla bla Bla bla bla Bla bla bla !
+          </p>
           <div className="flex gap-unit-sm">
             <Button
               color="primary"
@@ -34,7 +48,7 @@ function HeroSection({}: Props) {
               color="primary"
               variant="bordered"
               size="lg"
-              className="font-semibold"
+              className="font-semibold border-4"
             >
               Download CV
             </Button>

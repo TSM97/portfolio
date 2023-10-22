@@ -1,9 +1,18 @@
-'use client'
+"use client";
 
-import React from 'react'
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
+import React from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Link,
+  Button,
+} from "@nextui-org/react";
 
-type Props = {}
+import { ThemeSwitcher } from "../ThemeSwitcher/ThemeSwitcher";
+
+type Props = {};
 
 export default function NavBar({}: Props) {
   return (
@@ -39,9 +48,7 @@ export default function NavBar({}: Props) {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
+        <ThemeSwitcher />
       </NavbarContent>
     </Navbar>
   );

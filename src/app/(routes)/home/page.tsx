@@ -17,7 +17,7 @@ export default async function Home() {
   console.log("Home Page Server Session:", JSON.stringify(session, null, 2));
 
   return (
-    <div className="flex text-foreground bg-background min-w-screen mx-auto flex-col min-h-screen justify-center gap-10">
+    <div className="flex text-foreground bg-background min-w-screen mx-auto flex-col min-h-screen gap-10">
       <HeroSection />
     </div>
   );
