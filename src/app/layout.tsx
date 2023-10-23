@@ -21,7 +21,7 @@ export default function RootLayout({
         <NextUIProvider>
           <AuthProvider>
             <NavBar />
-            <main className="min-w-screen">{children}</main>
+            <main className="min-w-screen text-lg lg:text-xl">{children}</main>
           </AuthProvider>
         </NextUIProvider>
       </body>

@@ -16,38 +16,22 @@ type Props = {};
 
 export default function NavBar({}: Props) {
   return (
-    <Navbar>
+    <Navbar maxWidth="full" isBordered>
       <NavbarBrand>
         <div>My Logo</div>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Home
-          </Link>
+        <NavbarItem className="text-lg">Home</NavbarItem>
+        <NavbarItem className="text-lg" isActive>
+          About
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            About
-          </Link>
+        <NavbarItem className="text-lg" isActive>
+          Skills
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Skills
-          </Link>
+        <NavbarItem className="text-lg" isActive>
+          Experience
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Experience
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Contact
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
+        <NavbarItem className="text-lg">Contact</NavbarItem>
         <ThemeSwitcher />
       </NavbarContent>
     </Navbar>

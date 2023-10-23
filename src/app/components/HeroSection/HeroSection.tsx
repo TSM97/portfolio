@@ -10,7 +10,7 @@ type Props = {};
 
 function HeroSection({}: Props) {
   return (
-    <section className="container self-center">
+    <section className="container self-center pt-20">
       <div className="grid grid-cols-1 lg:grid-cols-12 pt-3 justify-between">
         <div className="col-span-7 place-self-center">
           <h1 className="font-extrabold text-4xl lg:text-6xl pt-4">
@@ -20,7 +20,7 @@ function HeroSection({}: Props) {
               sequence={[
                 // Same substring at the start will only be typed out once, initially
                 "John",
-                3000,
+                1000,
                 "Front-End Developer",
                 1000,
                 "UI/UX Designer",
