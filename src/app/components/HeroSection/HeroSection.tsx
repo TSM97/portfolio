@@ -6,9 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 
 import { AvatarMaker } from "../svgs";
 
-type Props = {};
-
-function HeroSection({}: Props) {
+function HeroSection() {
   return (
     <section className="container self-center pt-20">
       <div className="grid grid-cols-1 lg:grid-cols-12 pt-3 justify-between">

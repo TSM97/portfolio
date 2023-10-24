@@ -33,9 +33,9 @@ export function ThemeSwitcher() {
       }}
       thumbIcon={({ isSelected }) =>
         isSelected ? (
-          <Moon className="w-full h-full" />
-        ) : (
           <Sun className="w-full h-full" />
+        ) : (
+          <Moon className="w-full h-full" />
         )
       }
     />
