@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth/next";
 
 import { options } from "@/app/api/auth/[...nextauth]/options";
 import HeroSection from "@/app/components/HeroSection/HeroSection";
+import About from "@/app/components/About/About";
 
 export default async function Home() {
   const session = await getServerSession(options);
@@ -17,8 +18,9 @@ export default async function Home() {
   console.log("Home Page Server Session:", JSON.stringify(session, null, 2));
 
   return (
-    <div className="flex text-foreground bg-background min-w-screen mx-auto flex-col h-[80dvh] gap-10">
+    <>
       <HeroSection />
-    </div>
+      <About />
+    </>
   );
 }

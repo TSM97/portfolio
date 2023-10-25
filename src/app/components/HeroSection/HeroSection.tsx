@@ -8,7 +8,7 @@ import { AvatarMaker } from "../svgs";
 
 function HeroSection() {
   return (
-    <section className="container self-center pt-20">
+    <section className="self-center pt-20 flex text-foreground bg-background min-w-screen mx-auto flex-col h-[60dvh] gap-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 pt-3 justify-between">
         <div className="col-span-7 place-self-center">
           <h1 className="font-extrabold text-4xl lg:text-6xl pt-4">
@@ -29,10 +29,13 @@ function HeroSection() {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-lg lg:text-xl py-4">
-            Bla bla bla, Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla
-            bla, Bla bla bla Bla bla bla Bla bla bla !
-          </p>
+          <section className="text-lg lg:text-xl py-4">
+            <div>
+              I'm passionate about cutting-edge, pixel-perfect interfaces that
+              catch your eye
+            </div>
+            <div>and User Experience that just feel right!</div>
+          </section>
           <div className="flex gap-unit-sm">
             <Button
               color="primary"
